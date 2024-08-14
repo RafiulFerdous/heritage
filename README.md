@@ -1,4 +1,17 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a>
+
+i use laravel as backend and html css as front end. 
+
+custom role base authentication has been implimented in this project which has admin role id 1 , bidder role id 2 and propertyOwner role id 3. The role table
+must migrate before all process start there is a seeder named RoleSeeder.
+
+Use Three table Property,Property_details and bidtable.
+Bid functionality has complited and update the bid table and property table.
+
+Search and filter functionality implimented with scopedfilter.
+
+
+</p>
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
