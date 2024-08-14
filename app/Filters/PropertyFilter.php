@@ -34,4 +34,21 @@ class PropertyFilter extends QueryFilter
             $query->where('is_fully_furnished', $value);
         });
     }
+
+    public function search($term)
+    {
+        return $this->builder->where(function($query) use ($term) {
+            $query->where('name', 'like', "%$term%")
+                ->orWhere('location', 'like', "%$term%")
+                ->orWhereHas('details', function($query) use ($term) {
+                    $query->where('number_of_bed', 'like', "%$term%")
+                        ->orWhere('num_of_bath', 'like', "%$term%")
+                        ->orWhere('floor', 'like', "%$term%")
+                        ->orWhere('transection_type', 'like', "%$term%")
+                        ->orWhere('facing', 'like', "%$term%")
+                        ->orWhere('additional_rooms', 'like', "%$term%")
+                        ->orWhere('age_of_construction', 'like', "%$term%");
+                });
+        });
+    }
 }
